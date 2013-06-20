@@ -5,4 +5,8 @@ class ApplicationController < ActionController::Base
     redirect_to root_path, :alert => exception.message
   end
 
+  def get_user
+    @user = User.find(params[:user_id])
+  end
+  
 end

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Vehicle type:</b>
+  <%= @vehicle.vehicle_type %>
+</p>
+
+<p>
+  <b>Brand:</b>
+  <%= @vehicle.brand %>
+</p>
+
+<p>
+  <b>Vehicle model:</b>
+  <%= @vehicle.vehicle_model %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @vehicle.year %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @vehicle.user_id %>
+</p>
+
+<p>
+  <b>Km:</b>
+  <%= @vehicle.km %>
+</p>
+
+<p>
+  <b>Fuel:</b>
+  <%= @vehicle.fuel %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_vehicle_path(@user, @vehicle) %> |
+<%= link_to 'Destroy', [@user, @vehicle], method: :delete %> |
+<%= link_to 'Back', user_vehicles_path %>

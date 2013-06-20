@@ -23,3 +23,37 @@
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
   box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
+
+li {
+display: list-item;
+text-align: -webkit-match-parent;
+}
+
+body {
+line-height: 1.28;
+text-align: left;
+direction: ltr;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#div_logo {float:left;margin-left:-7px;padding-right:1px;z-index:5}
+
+#rfloat {
+  float: right;
+  display: block;
+}
+
+#pageNav {
+margin-right: 1px;
+}
+.clearfix {
+	zoom: 1;
+}
+#pageNav .navItem, #pageNav {
+float: left;
+}

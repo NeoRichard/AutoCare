@@ -1,0 +1,16 @@
+<%= simple_form_for([current_user, @vehicle]) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :vehicle_type %>
+    <%= f.input :brand %>
+    <%= f.input :vehicle_model %>
+    <%= f.input :year %>
+    <%= f.input :km %>
+    <%= f.input :fuel %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
