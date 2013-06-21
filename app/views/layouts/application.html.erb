@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "AutoCareLight web page" %></title>
@@ -9,6 +10,8 @@
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
   </head>
+
+
   <body class="<%= controller_name %> <%= action_name %>">
     <div class="navbar navbar-fixed-top">
       <nav class="navbar-inner">
@@ -17,6 +20,8 @@
         </div>
       </nav>
     </div>
+
+    
     <div id="main" role="main">
       <div class="container">
         <div class="content">
@@ -29,16 +34,16 @@
 
 <br />
 <br />
+
+        </div>
+      </div> <!--! end of .container -->
+    </div> <!--! end of #main -->
+  </body>
+
           <footer>
 <%= link_to "Quienes Somos?", root_path, :class => 'footer' %> - 
 <%= link_to "FAQ", root_path, :class => 'footer' %> - 
 <%= link_to "Condiciones de Uso", root_path, :class => 'footer' %> - 
 <%= link_to "Ayuda", root_path, :class => 'footer' %>
-
-
           </footer>
-        </div>
-      </div> <!--! end of .container -->
-    </div> <!--! end of #main -->
-  </body>
 </html>

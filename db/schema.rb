@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130618071428) do
+ActiveRecord::Schema.define(:version => 20130621035938) do
 
   create_table "roles", :force => true do |t|
     t.string   "name"
@@ -54,12 +54,15 @@ ActiveRecord::Schema.define(:version => 20130618071428) do
     t.string   "vehicle_type"
     t.string   "brand"
     t.string   "vehicle_model"
-    t.integer  "year"
     t.integer  "user_id"
     t.integer  "km"
     t.integer  "fuel"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.string   "model_years_trims"
+    t.integer  "year"
+    t.string   "trim"
+    t.string   "trims"
   end
 
 end

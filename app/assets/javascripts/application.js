@@ -91,4 +91,40 @@ function()
 
      //If creating a search interface, set onclick event for the search button.  Make sure the ID used matches your search button ID.
      $('#cq-search-btn').click( function(){ carquery.search(); } );
+
+     //NOTE: Inside the carquery object, this.base_url will contain the location of the current version of the CarQuery API
+
+
+/*
+    $.getJSON("www.carqueryapi.com/api/0.3/"+"?callback=?", {cmd:"getMakes", year:"2009"}, function(data) {
+
+       //The 'data' variable contains all response data.
+       var makes = data.Makes;
+       for (var i = 0; i < makes.length; i++)
+       {
+           //You can now do what you like with the response data
+           alert(makes[i].make_display);
+       }
+    });
+    */
+/*
+    $("#car-model-trims").change(function(){
+    var s1 = $("#vehicle_trim").val(  );
+    var s2 = $("#car-model-trims").val();
+
+    alert("s1: "+s1+" , s2: "+s2);
+        });
+*/
+    $("#cq-show-data").click(function(){
+
+    $("#vehicle_vehicle_type").val( "car" );
+    $("#vehicle_brand").val( $("#car-makes").val() );
+    $("#vehicle_vehicle_model").val( $("#car-models").val() );
+    $("#vehicle_trim").val( $("#car-model-trims").val() );
+    $("#vehicle_year").val( $("#car-years").val() );
+    $("#vehicle_km").val( 0 );
+    $("#vehicle_fuel").val( 0 );
+
+
+    });
 });

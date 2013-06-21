@@ -1,0 +1,5 @@
+La estructura es similar a Facebook, inicialmente con bootstrap
+
+El manejo de usuario y sesión es a través de las gemas device, can-can
+
+La información para la creación de autos se obtiene desde www.carqueryapi.com vía json

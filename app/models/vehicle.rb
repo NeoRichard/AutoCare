@@ -1,5 +1,5 @@
 class Vehicle < ActiveRecord::Base
-  attr_accessible :brand, :fuel, :km, :user_id, :vehicle_model, :vehicle_type, :year
+  attr_accessible :brand, :fuel, :km, :user_id, :vehicle_model, :vehicle_type, :year, :trim
 
   belongs_to :user
 

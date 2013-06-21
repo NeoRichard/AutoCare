@@ -49,7 +49,7 @@ before_filter :get_user
   # POST /vehicles.json
   def create
     @vehicle = Vehicle.new(params[:vehicle])
-        @vehicle.user = User.find(2) #@user.id
+        @vehicle.user = User.find(params[:user_id]) #@user.id
 
     respond_to do |format|
       if @vehicle.save

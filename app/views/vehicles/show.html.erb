@@ -6,18 +6,22 @@
 </p>
 
 <p>
-  <b>Brand:</b>
+  <b>Makes:</b>
   <%= @vehicle.brand %>
 </p>
 
 <p>
-  <b>Vehicle model:</b>
+  <b>Models:</b>
   <%= @vehicle.vehicle_model %>
 </p>
 
 <p>
   <b>Year:</b>
   <%= @vehicle.year %>
+</p>
+<p>
+  <b>Trims:</b>
+  <%= @vehicle.trim %>
 </p>
 
 <p>
@@ -35,7 +39,12 @@
   <%= @vehicle.fuel %>
 </p>
 
+<!-- %= if @vehicle.user == current_user %>
+  < %= link_to 'Edit', edit_user_vehicle_path(@user, @vehicle) %> |
+  < %= link_to 'Destroy', [@user, @vehicle], method: :delete %> |
+  < %= link_to 'Back', user_vehicles_path %>
 
-<%= link_to 'Edit', edit_user_vehicle_path(@user, @vehicle) %> |
-<%= link_to 'Destroy', [@user, @vehicle], method: :delete %> |
-<%= link_to 'Back', user_vehicles_path %>
+< %= end %-->
+  <%= link_to 'Edit', edit_user_vehicle_path(@user, @vehicle) %> |
+  <%= link_to 'Destroy', [@user, @vehicle], method: :delete %> |
+  <%= link_to 'Back', user_vehicles_path %>

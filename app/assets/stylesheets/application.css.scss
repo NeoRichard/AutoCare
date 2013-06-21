@@ -28,8 +28,8 @@ li {
 display: list-item;
 text-align: -webkit-match-parent;
 }
-
 body {
+color: #333;
 line-height: 1.28;
 text-align: left;
 direction: ltr;
@@ -56,4 +56,23 @@ margin-right: 1px;
 }
 #pageNav .navItem, #pageNav {
 float: left;
+}
+
+.fbx #pageHead, #blueBar #pageHead {
+padding-top: 6px;
+width: 981px;
+}
+
+aside{
+  display: block;
+}
+#jewelContainer {
+  float: left;
+  position: relative;
+  z-index: 4;
+}
+.fbJewel {
+  float: left;
+  margin-right: -1px;
+  position: relative;
 }
