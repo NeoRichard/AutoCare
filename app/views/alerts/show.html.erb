@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Vehicle:</b>
+  <%= @alert.vehicle_id %>
+</p>
+
+<p>
+  <b>Component:</b>
+  <%= @alert.component %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @alert.content %>
+</p>
+
+<p>
+  <b>Checked:</b>
+  <%= @alert.checked %>
+</p>
+
+
+<%= link_to 'Edit', edit_alert_path(@alert) %> |
+<%= link_to 'Back', alerts_path %>

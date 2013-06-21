@@ -115,15 +115,16 @@ function()
     alert("s1: "+s1+" , s2: "+s2);
         });
 */
-    $("#cq-show-data").click(function(){
+    $("#create-vehicle-submit").click(function(){
 
-    $("#vehicle_vehicle_type").val( "car" );
-    $("#vehicle_brand").val( $("#car-makes").val() );
-    $("#vehicle_vehicle_model").val( $("#car-models").val() );
-    $("#vehicle_trim").val( $("#car-model-trims").val() );
-    $("#vehicle_year").val( $("#car-years").val() );
-    $("#vehicle_km").val( 0 );
-    $("#vehicle_fuel").val( 0 );
+        carquery.populateCarData('car-model-data');
+        $("#vehicle_vehicle_type").val( "car" );
+        $("#vehicle_brand").val( $("#car-makes").val() );
+        $("#vehicle_vehicle_model").val( $("#car-models").val() );
+        $("#vehicle_trim").val( $("#car-model-trims").val() );
+        $("#vehicle_year").val( $("#car-years").val() );
+        $("#vehicle_km").val( 0 );
+        $("#vehicle_fuel").val( 0 );
 
 
     });

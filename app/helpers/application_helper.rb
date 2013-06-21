@@ -55,7 +55,12 @@ module ApplicationHelper
   def vehicles_for_select
     Vehicle.all.collect { |v| [v.brand, v.id] }
   end
+############################
 
+  def get_user
+#    @user = User.find(params[:user_id])
+     @user = User.find(session[:id])
+  end
 
 ############################
 #Returns the Gravatar for the given user.

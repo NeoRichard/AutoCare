@@ -11,7 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130621035938) do
+ActiveRecord::Schema.define(:version => 20130621081318) do
+
+  create_table "alerts", :force => true do |t|
+    t.integer  "vehicle_id"
+    t.string   "component"
+    t.text     "content"
+    t.boolean  "checked"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "messages", :force => true do |t|
+    t.integer  "from"
+    t.integer  "to"
+    t.text     "content"
+    t.boolean  "opened"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"
@@ -57,12 +75,17 @@ ActiveRecord::Schema.define(:version => 20130621035938) do
     t.integer  "user_id"
     t.integer  "km"
     t.integer  "fuel"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.string   "model_years_trims"
     t.integer  "year"
     t.string   "trim"
     t.string   "trims"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "state"
   end
 
 end

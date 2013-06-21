@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>From:</b>
+  <%= User.find(@message.from).name %>
+</p>
+
+<p>
+  <b>To:</b>
+  <%= User.find(@message.to).name %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @message.content %>
+</p>
+
+<p>
+  <b>Opened:</b>
+  <%= @message.opened %>
+</p>
+
+
+<!--%= link_to 'Edit', edit_user_message_pathuser, (@message) %> |
+< %= link_to 'Back', user_messages_path %>
+
+  <!--%= link_to 'Destroy', [@user, @vehicle], method: :delete %> |
+-->

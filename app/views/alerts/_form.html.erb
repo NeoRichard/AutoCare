@@ -1,0 +1,14 @@
+<%= simple_form_for(@alert) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :vehicle_id %>
+    <%= f.input :component %>
+    <%= f.input :content %>
+    <%= f.input :checked %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

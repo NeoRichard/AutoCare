@@ -2,13 +2,13 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :vehicle_type  , :as => :hidden %>
-    <%= f.input :brand  , :as => :hidden %>
+    <%= f.input :vehicle_type  ,  :as => :hidden %>
+    <%= f.input :brand  ,         :as => :hidden %>
     <%= f.input :vehicle_model  , :as => :hidden %>
-    <%= f.input :year  , :as => :hidden %>
-    <%= f.input :trim  , :as => :hidden %>
-    <%= f.input :km  , :as => :hidden %>
-    <%= f.input :fuel  , :as => :hidden %>
+    <%= f.input :year  ,          :as => :hidden %>
+    <%= f.input :trim  ,          :as => :hidden %>
+    <%= f.input :km  ,            :as => :hidden %>
+    <%= f.input :fuel  ,          :as => :hidden %>
 
     <!-- %= f.input :vehicle_type %>
     < %= f.input :brand %>
@@ -21,31 +21,62 @@
 <!-- , :as => :hidden -->
 
 
-<table>
+<!--table>
   <tbody>
   <tr valign="bottom">
     <th>Year:</th>
     <th>Make:</th>
     <th>Model:</th>
     <th>Trim:</th>
+    < ! - -th>Image:</th- - >
   </tr>
   <tr>
     <td><select id="car-years" name="car-years"></select></td>
     <td><select id="car-makes" name="car-makes"></select></td>
     <td><select id="car-models" name="car-models"></select></td>
     <td><select id="car-model-trims" name="car-model-trims"></select></td>
+    <! - - td>< %= image_tag @vehicle.image.url(:thumb) %></td- ->
+  </tr>
+  </tbody>
+</table-->
+
+
+<table>
+  <tbody>
+  <!-- tr valign="bottom">
+    <th>Year:</th>
+    <th>Make:</th>
+  </tr-->
+  <tr>
+    <td>Year:</td>
+    <td><select id="car-years" name="car-years"></select></td>
+  </tr>
+  <tr>
+    <th>Make:</td>
+    <td><select id="car-makes" name="car-makes"></select></td>
+  </tr>
+  <tr>
+    <td>Model:</td>
+    <td><select id="car-models" name="car-models"></select></td>
+  </tr>
+  <tr>
+    <td>Trim:</td>
+    <td><select id="car-model-trims" name="car-model-trims"></select></td>
   </tr>
   </tbody>
 </table>
 
 <!--input id="cq-sold-in-us" type="checkbox" /><label for="us-only">Show Only US Models</label-->
-
-<input id="cq-show-data" type="button" value="Show Data" />
+<!-- Previsualizar Data del Auto!!! -->
+<!--input id="cq-show-data" type="button" value="Show Info" /-->
 <div id="car-model-data"></div>
 
 
-
+<!--div class="field">
+  < %= f.label :image %>
+  < %= f.file_field :image %>
+</div-->
   <div class="form-actions" id="create-vehicle" >
-    <%= f.button :submit %>
+    <%= f.button :submit, :id=>"create-vehicle-submit" %>
   </div>
 <% end %>

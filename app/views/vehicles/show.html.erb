@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<!--%= image_tag @vehicle.image.url(:medium) %-->
 <p>
   <b>Vehicle type:</b>
   <%= @vehicle.vehicle_type %>
@@ -26,7 +26,7 @@
 
 <p>
   <b>User:</b>
-  <%= @vehicle.user_id %>
+  <%= User.find(@vehicle.user_id).name %>
 </p>
 
 <p>

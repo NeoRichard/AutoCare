@@ -1,16 +1,24 @@
 <div id="pageHead" class ="clearfix">
 <div id="div_logo">
-<%= link_to image_tag("logo.png", :alt => "home image", :width => 31, :height => 31), root_path, :class => 'brand' %>
-<%= link_to "AutoCareLight", root_path, :class => 'brand' %>
+<%= link_to "AutoCareLight", user_vehicles_path, :class => 'brand' %>
+<%= link_to image_tag("logo.png", :alt => "home image", :width => 31, :height => 31), user_vehicles_path, :class => 'brand' %>
 </div>
 
 <div id="jewelContainer" class="notifNegativeBase notifCentered notifGentleAppReceipt">
   <div id= "fbRequestsJewel" class="uiToggle fbJewel" >
-<%= link_to "Mensajes", root_path, :class => 'brand' %>
+<!-- %= link_to "Mensajes",messages_path, :class => 'brand' % -->
+<%= link_to image_tag("icon-mail.png", :alt => "messages", :width => 31, :height => 31), user_messages_path, :class => 'brand' %>
   </div>
+
   <div id= "fbMessagesJewel" class="uiToggle fbJewel" >
-<%= link_to "Alertas", root_path, :class => 'brand' %>
+<%= link_to image_tag("icon-alert.png", :alt => "alert", :width => 31, :height => 31), alerts_path, :class => 'brand' %>
   </div>
+  
+
+  <div id= "fbMessagesJewel" class="uiToggle fbJewel" >
+<%= link_to image_tag("icon-offer.png", :alt => "alert", :width => 31, :height => 31), alerts_path, :class => 'brand' %>
+  </div>
+
 </div>
 
 
@@ -18,8 +26,8 @@
 <nav id="rfloat">
   <ul id="pageNav" class="clearfix" role="navigation">
     <li class ="navItem firstItem tinyman">
-      <%= gravatar_for current_user,   size: 23 %>
-      <%= link_to current_user.name, root_path %> | 
+      <%= gravatar_for current_user,   size: 23 , :class => 'brand' %>
+      <%= link_to current_user.name, user_vehicles_path %> | 
     </li>
 
     <li class="navItem middleItem voiceBarToggle">

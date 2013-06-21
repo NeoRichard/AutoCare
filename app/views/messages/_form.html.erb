@@ -1,0 +1,14 @@
+<%= simple_form_for([current_user, @message]) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <!--%= f.input :from %-->
+    <%= f.input :to %>
+    <%= f.input :content %>
+    <%= f.input :opened %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
