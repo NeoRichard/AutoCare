@@ -1,6 +1,121 @@
 <h1>Listing my vehicles</h1>
+<div id="date-posts">
 
-<table>
+
+<% @vehicles.each do |vehicle| %>
+    <div class="post-outer">
+        <div class="post hentry">
+            <a name="6367909862322912867"></a>
+            <h2 class="post-title entry-title">
+                
+
+                <%= link_to vehicle.brand + "  " +vehicle.vehicle_model + " (" +vehicle.year.to_s + ")" , [current_user, vehicle] %>
+            </h2>
+            <div class="post-header">
+                <div class="post-header-line-1"></div>
+            </div>
+            <div class="post-body entry-content">
+                <div id="summary6367909862322912867">
+                    <span style="float:left; padding:0;margin:0">
+                        <%= image_tag vehicle.image.url(:thumb) %>
+                    </span>  
+                    <ul>
+                        <li>$X
+                        </li>
+                        <!--li>KM:<%= vehicle.km %>
+                            <button id="button_add_km">Add KM?</button>
+                            <div id="div_add_km">
+                                <label>How many km?</label>
+                                <input type="number" name="add_km" min="0" max="1000">
+                                <button id="confirm_button_add_km">Add</button>
+                            </div>
+                        </li>
+                        <li>Fuel:<%= vehicle.fuel %>
+                            <button id="button_add_fuel">Add Fuel?</button>
+                            <div id="div_add_fuel">
+                                <label>How many fuel?</label>
+                                <input type="number" name="add_fuel" min="0" max="1000">
+                                <button id="confirm_button_add_fuel">Add</button>
+                            </div>
+                        </li-->
+
+                        <li>
+                            <div class="div_km" id= <%= "km_"+vehicle.id.to_s %> >
+                                KM:<%= vehicle.km %>
+                                <button class="button_add_km" id= <%= "button_km2_"+vehicle.id.to_s %> >
+                                    Add KM?
+                                </button>
+                                <div class="div_add_km" id= <%= "km2_"+vehicle.id.to_s %> >
+                                    <label>How many km?</label>
+                                    <input type="number" name="add_km" min="0" max="1000">
+                                    <button class="confirm_button_add_km">Add</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="div_fuel" id= <%= "fuel_"+vehicle.id.to_s %> >
+                                Fuel:<%= vehicle.fuel %>
+                                <button class="button_add_fuel" id= <%= "button_fuel2_"+vehicle.id.to_s %> >Add Fuel?</button>
+                                <div class="div_add_fuel" id= <%= "fuel2_"+vehicle.id.to_s %> >
+                                    <label>How many fuel?</label>
+                                    <input type="number" name="add_fuel" min="0" max="1000">
+                                    <button class="confirm_button_add_fuel">Add</button>
+                                </div>
+                            </div>
+                        </li>
+                        
+
+                        <li>Others components...
+                        </li>
+                    </ul>
+        <!--td>< %= vehicle.km %></td>
+        <td>< %= vehicle.fuel %></td-->
+                </div>
+
+                <div style="clear: both;">
+                </div>
+                </div>
+                <div class="post-footer">
+                    <div class="post-footer-line post-footer-line-1">
+                        <%= link_to  image_tag("icon-show.png", :alt => "show vehicle", :width => 31, :height => 31), [current_user, vehicle] %>
+                        
+                        <%= link_to  image_tag("icon-edit.png", :alt => "edit vehicle", :width => 31, :height => 31), edit_user_vehicle_path(current_user, vehicle) %>
+
+                        <%= link_to  image_tag("icon-delete.png", :alt => "delete vehicle", :width => 31, :height => 31), [current_user, vehicle], method: :delete, data: { confirm: 'Are you sure?' } %>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<% end %>
+
+
+
+    <div id="post-new">
+        <div class="post hentry">
+            <a name="6367909862322912867"></a>
+            <h2 class="post-title entry-title">
+                        <%= link_to "Add New Car", new_user_vehicle_path(current_user)  %></h2>
+            <div class="post-header">
+                <div class="post-header-line-1"></div>
+            </div>
+            <div class="post-body entry-content">
+                <div id="summary6367909862322912867">
+                    <span style="float:left; padding:0;margin:0">
+                        <%= link_to image_tag("icon-car_add.png", :alt => "car add", :width => 127, :height => 127), new_user_vehicle_path(current_user), :class => "new"  %>
+                    </span>  
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!--table>
   <tr>
     <th>Vehicle Image</th>
     <th>Vehicle type</th>
@@ -16,25 +131,24 @@
     <th></th>
   </tr>
 
-<% @vehicles.each do |vehicle| %>
+< % @vehicles.each do |vehicle| %>
   <tr>
-    <td><%= image_tag vehicle.image.url(:thumb) %></td> 
-    <td><%= vehicle.vehicle_type %></td>
-    <td><%= vehicle.brand %></td>
-    <td><%= vehicle.vehicle_model %></td>
-    <td><%= vehicle.year %></td>
-    <td><%= vehicle.trim %></td>
-    <td><%= vehicle.user_id %></td>
-    <td><%= vehicle.km %></td>
-    <td><%= vehicle.fuel %></td>
-    <td><%= link_to 'Show', [current_user, vehicle] %></td>
-    <td><%= link_to 'Edit', edit_user_vehicle_path(current_user, vehicle) %></td>
-    <td><%= link_to 'Destroy', [current_user, vehicle], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td>< %= image_tag vehicle.image.url(:thumb) %></td> 
+    <td>< %= vehicle.vehicle_type %></td>
+    <td>< %= vehicle.brand %></td>
+    <td>< %= vehicle.vehicle_model %></td>
+    <td>< %= vehicle.year %></td>
+    <td>< %= vehicle.trim %></td>
+    <td>< %= vehicle.user_id %></td>
+    <td>< %= vehicle.km %></td>
+    <td>< %= vehicle.fuel %></td>
+    <td>< %= link_to 'Show', [current_user, vehicle] %></td>
+    <td>< %= link_to 'Edit', edit_user_vehicle_path(current_user, vehicle) %></td>
+    <td>< %= link_to 'Destroy', [current_user, vehicle], method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
-<% end %>
-</table>
+< % end %>
+</table-->
 
 <br />
 
-<%= link_to "New Vehicle", new_user_vehicle_path(current_user) %>
-
+<!--%= link_to "New Vehicle", new_user_vehicle_path(current_user) %-->

@@ -45,6 +45,13 @@
   < %= link_to 'Back', user_vehicles_path %>
 
 < %= end %-->
-  <%= link_to 'Edit', edit_user_vehicle_path(@user, @vehicle) %> |
-  <%= link_to 'Destroy', [@user, @vehicle], method: :delete %> |
-  <%= link_to 'Back', user_vehicles_path %>
+  <!--%= link_to 'Edit', edit_user_vehicle_path(@user, @vehicle) %> |
+  < %= link_to 'Destroy', [@user, @vehicle], method: :delete %> |
+  < %= link_to 'Back', user_vehicles_path %-->
+
+
+  <%= link_to  image_tag("icon-back.png", :alt => "Back", :width => 31, :height => 31), user_vehicles_path %>
+  
+  <%= link_to  image_tag("icon-edit.png", :alt => "edit vehicle", :width => 31, :height => 31), edit_user_vehicle_path(current_user, @vehicle) %>
+
+  <%= link_to  image_tag("icon-delete.png", :alt => "delete vehicle", :width => 31, :height => 31), [current_user, @vehicle], method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -1,7 +1,11 @@
 <div id="pageHead" class ="clearfix">
 <div id="div_logo">
+
+  <% if user_signed_in? %>
 <%= link_to "AutoCareLight", user_vehicles_path, :class => 'brand' %>
 <%= link_to image_tag("logo.png", :alt => "home image", :width => 31, :height => 31), user_vehicles_path, :class => 'brand' %>
+
+
 </div>
 
 <div id="jewelContainer" class="notifNegativeBase notifCentered notifGentleAppReceipt">
@@ -20,6 +24,12 @@
   </div>
 
 </div>
+<% else %>
+<%= link_to "AutoCareLight", "." , :class => 'brand' %>
+<%=  image_tag("logo.png", :alt => "home image", :width => 31, :height => 31) %>
+
+<% end %>
+
 
 
   <% if user_signed_in? %>

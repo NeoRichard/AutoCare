@@ -18,11 +18,85 @@
 
 
 $(document).ready(function() {
+        $('.div_add_km').hide();
+        $('.div_add_km').hide();
+        $('.button_add_km').show();
+
+        $('.div_add_fuel').hide();
+        $('.div_add_fuel').hide();
+        $('.button_add_fuel').show();
+
 	$('#variable_attribute').change(function() {
         var str = $(this).children(':selected').text() + " ";
   		alert(str);
 	});
-	
+    $('.button_add_km').click(function() {
+        var parent_id = $(this).closest("div").attr("id");
+        var sibling_id = $(this).siblings();
+        var button_id = $(this).closest("div").attr("id");
+
+        $(sibling_id).show();
+        $(this).hide();
+    });
+
+    $('.confirm_button_add_km').click(function() {
+        var parent_id = $(this).closest("div").attr("id");
+        var button_id = $("#button_"+parent_id).attr("id");
+        parent_id = "#"+parent_id;
+        button_id = "#"+button_id;
+        
+        $(parent_id).hide();
+        $(button_id).show();
+    });
+
+
+
+    $('.button_add_fuel').click(function() {
+        var parent_id = $(this).closest("div").attr("id");
+        var sibling_id = $(this).siblings();
+        var button_id = $(this).closest("div").attr("id");
+
+        $(sibling_id).show();
+        $(this).hide();
+    });
+
+    $('.confirm_button_add_fuel').click(function() {
+        var parent_id = $(this).closest("div").attr("id");
+        var button_id = $("#button_"+parent_id).attr("id");
+        parent_id = "#"+parent_id;
+        button_id = "#"+button_id;
+        
+        $(parent_id).hide();
+        $(button_id).show();
+    });
+
+
+    /*
+    $('#button_add_km').click(function() {
+        $('#div_add_km').show();
+        $('#button_add_km').hide();
+    });
+
+    $('#confirm_button_add_km').click(function() {
+        $('#div_add_km').hide();
+        $('#button_add_km').show();
+    });
+*/
+
+    
+    $('#button_add_fuel').click(function() {
+        $('#div_add_fuel').show();
+        $('#div_add_fuel').show();
+        $('#button_add_fuel').hide();
+    });
+
+    $('#confirm_button_add_fuel').click(function() {
+        $('#div_add_fuel').hide();
+        $('#div_add_fuel').hide();
+        $('#button_add_fuel').show();
+    });
+
+
 
 });
 

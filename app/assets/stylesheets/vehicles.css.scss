@@ -1,3 +1,75 @@
 // Place all the styles related to the Vehicles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+color: #222;
+font-family: 'Droid Sans', arial, sans-serif;
+font-size: 13px;
+text-align: left;
+line-height: 1.5em;
+}
+
+div {
+display: block;
+}
+body {
+color: #222;
+font-family: 'Droid Sans', arial, sans-serif;
+font-size: 13px;
+text-align: left;
+line-height: 1.5em;
+}
+.post {
+	float: left;
+	//width: 299px;
+	//height: 280px;
+	margin: 25px 20px 0 0;
+	padding: 0;
+	text-align: center;
+	background: #e4e2e0;
+
+}
+.post img {
+	background: #e4e2e0;
+	padding: 10px;
+	border: none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	float: center;
+}
+
+
+.post-title {
+	background: none;
+	height: 25px;
+	overflow: hidden;
+	margin: 0 0 5px 0;
+	padding: 0;
+	font-size: 20px;
+	line-height: 1.2em;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+}
+
+.post-body {
+// float: left;
+width: 300px;
+//height: 255px;
+overflow: hidden;
+margin: 0;
+padding: 0;
+}
+
+element.style {
+//float: left;
+padding: 0;
+margin: 0;
+}
+
+#post-new{
+
+	background: #000	;
+
+}

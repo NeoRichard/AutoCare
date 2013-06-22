@@ -40,3 +40,6 @@ Rails3BootstrapDeviseCancan::Application.routes.draw do
   end
 
 end
+
+
+# http://archives.ryandaigle.com/articles/2008/9/7/what-s-new-in-edge-rails-shallow-routes
