@@ -31,29 +31,44 @@
               <%= yield %>
             </div>
           </div>
-
-<br />
-<br />
-
         </div>
       </div> <!--! end of .container -->
     </div> <!--! end of #main -->
   </body>
 
-          <footer>
-            <ul>
-              <li>
-<%= link_to "Quienes Somos?", root_path, :class => 'footer' %>
-              <li>
-              </li>
-<%= link_to "FAQ", root_path, :class => 'footer' %>
-              <li>
-              </li>
-<%= link_to "Condiciones de Uso", root_path, :class => 'footer' %>
-              <li>
-              </li>
-<%= link_to "Ayuda", root_path, :class => 'footer' %>
-              </li>
-            </ul>
+
+
+          <footer id="pageFooter" data-referrer="page_footer">
+            <div id="contentCurve"></div>
+
+            <div role="contentinfo" aria-label="Enlaces a sitios de Facebook">
+              <table class="uiGrid navigationGrid" cellspacing="0" cellpadding="0">
+                <tbody>
+                  <tr>
+                    <td class="hLeft">
+                      <a href="https://www.facebook.com/facebook" accesskey="8" title="Lee nuestro blog, descubre el centro de recursos y encuentra ofertas de trabajo.">About</a>
+                    </td>
+                    
+                    <td class="hLeft plm">
+                      <a href="https://www.facebook.com/facebook" accesskey="8" title="Lee nuestro blog, descubre el centro de recursos y encuentra ofertas de trabajo.">FAQ</a>
+                    </td>
+                    <td class="hLeft plm">
+                      <a href="https://www.facebook.com/facebook" accesskey="8" title="Lee nuestro blog, descubre el centro de recursos y encuentra ofertas de trabajo.">Terms</a>
+                    </td>
+                    
+                    <td class="hLeft plm">
+                      <a href="https://www.facebook.com/facebook" accesskey="8" title="Lee nuestro blog, descubre el centro de recursos y encuentra ofertas de trabajo.">Help</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+            <div class="mvl copyright">
+              <div class="fsm fwn fcg">
+                <span> AutoCareLight © 2013</span> · <a rel="dialog" href="/ajax/intl/language_dialog.php?uri=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D524750647580864%26set%3Da.146668695389063.36825.146664945389438%26type%3D1%26ref%3Dnf" title="Usa AutoCareLight en otro idioma." role="button">English</a>
+              </div>
+            </div>
           </footer>
 </html>

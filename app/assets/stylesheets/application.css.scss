@@ -11,6 +11,44 @@
  *= require_self
  *= require_tree .
 */
+/*
+h1 {
+text-align: center;
+font-weight: bold;
+font-size: 30px;
+line-height: 36px;
+font: italic 40pt Calibri;
+
+margin: 10px auto;
+color: #555;
+font:italic small-caps bold 20px georgia,garamond,serif;
+text-shadow:2px 2px 8px yellow;
+
+font: italic small-caps bold 20px georgia,garamond,serif;
+text-shadow: 2px 2px 8px orange;
+text-rendering: optimizelegibility;
+}
+*/
+h1{
+
+
+display: block;
+font-weight: bold;
+color: #555;
+
+text-rendering: optimizelegibility;
+text-align: center;
+font-size: 30px;
+line-height: 36px;
+font: italic 40pt Calibri;
+text-shadow: 2px 2px 8px yellow;
+-webkit-margin-before: 0.67em;
+-webkit-margin-after: 0.67em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+
+
+}
 
 .content {
   background-color: #eee;
@@ -76,3 +114,91 @@ aside{
   margin-right: -1px;
   position: relative;
 }
+
+body, button, input, label, select, td, textarea {
+font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+font-size: 11px;
+}
+
+#pageFooter {
+color: #737373;
+font-size: 11px;
+margin: 0 auto;
+width: 980px;
+}
+
+.fbx #pageFooter {
+margin: auto;
+width: auto;
+}
+
+#contentCurve {
+background-color: #fff;
+border-bottom: 1px solid #ccc;
+font-size: 1px;
+height: 8px;
+margin-bottom: 8px;
+}
+
+.uiGrid {
+border: 0;
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+.navigationGrid {
+line-height: 20px;
+width: 800px;
+}
+
+
+.uiGrid .hLeft {
+text-align: left;
+}
+
+.navigationGrid td {
+padding-right: 10px;
+}
+
+
+
+table {
+word-wrap: normal;
+border-collapse: separate;
+border-spacing: 2px;
+border-color: gray;
+}
+tbody {
+display: table-row-group;
+vertical-align: middle;
+border-color: inherit;
+}
+
+tr {
+display: table-row;
+vertical-align: inherit;
+border-color: inherit;
+}
+td, th {
+display: table-cell;
+vertical-align: inherit;
+}
+
+#pageFooter a:last-child {
+margin-right: 0;
+}
+
+#pageFooter a {
+text-decoration: none;
+white-space: nowrap;
+}
+
+a {
+color: #3b5998;
+cursor: pointer;
+text-decoration: none;
+}
+.plm {
+padding-left: 10px;
+}
+

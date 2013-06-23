@@ -1,3 +1,214 @@
 // Place all the styles related to the Messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+._2tm {
+padding: 0 14px 0 10px;
+}
+
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+ul, menu, dir {
+display: block;
+// list-style-type: disc;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 40px;
+}
+
+.uiScrollableAreaBody {
+direction: ltr;
+}
+
+body, button, input, label, select, td, textarea {
+font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+font-size: 11px;
+}
+
+body {
+color: #333;
+line-height: 1.28;
+text-align: left;
+direction: ltr;
+}
+
+.wmMasterView ._k-:first-child {
+border-width: 0 0 1px;
+margin-top: 0;
+}
+
+._k- {
+position: relative;
+margin-top: -1px;
+border-color: #e8e8e8;
+border-style: solid;
+}
+
+li {
+display: list-item;
+text-align: -webkit-match-parent;
+}
+
+.uiScrollableAreaBody {
+direction: ltr;
+}
+
+._l7 {
+display: none;
+position: absolute;
+top: 32px;
+right: -3px;
+}
+
+.rfloat {
+float: right;
+}
+a:-webkit-any-link {
+color: -webkit-link;
+text-decoration: pointer;
+cursor: auto;
+}
+a {
+color: #3b5998;
+cursor: pointer;
+text-decoration: none;
+}
+
+.mrm {
+margin-right: 10px;
+}
+
+.lfloat {
+float: left;
+}
+
+element.style {
+width: 50px;
+height: 50px;
+}
+
+._l4 {
+line-height: 16px;
+padding-top: 8px;
+}
+._l0 {
+color: gray;
+display: block;
+float: right;
+margin-left: 2px;
+vertical-align: middle;
+}
+
+abbr {
+border-bottom: none;
+}
+
+._l1 {
+color: #333;
+font-size: 13px;
+font-weight: bold;
+}
+
+._l2, ._l3 {
+white-space: nowrap;
+}
+
+._l4 {
+line-height: 16px;
+}
+
+a {
+color: #3b5998;
+cursor: pointer;
+}
+
+.uiScrollableAreaBody {
+direction: ltr;
+}
+
+._l6 {
+color: #8096c1;
+display: none;
+margin-right: 2px;
+text-align: right;
+}
+
+._k-:hover ._l3, ._l3 {
+margin-right: 31px;
+}
+
+._l2, ._l3 {
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+.fcg {
+color: gray;
+}
+
+.fwn {
+font-weight: normal;
+}
+
+.fsm {
+font-size: 11px;
+}
+
+.MercuryRepliedIndicator.repliedLast {
+background-image: url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yv/r/O9cp0pJN-I2.png);
+background-repeat: no-repeat;
+background-size: auto;
+background-position: -66px -392px;
+display: inline-block;
+height: 9px;
+width: 10px;
+margin-right: 4px;
+}
+
+.flow_image{
+width: 150px;
+margin-right: 24px;
+margin-top: 5px;
+}
+
+.MercuryThreadImage {
+width: 100px;
+height: 65px;
+}
+
+
+#div_photo_to_user{
+//float:left;margin: 210;	
+width:320px;
+height:102px;
+}
+
+#select_to_user{
+//float:left;
+width:160px;
+float:left;
+}
+
+#gravatar_to{
+margin-left:15px;
+border:1px solid gray;
+padding:1em;
+height: 63px;
+text-align: left;
+float:right;
+}
+
+#other_content_message{
+	margin: 60;
+//float:left;
+}

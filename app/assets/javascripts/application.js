@@ -15,6 +15,7 @@
 //= require bootstrap
 //= require_tree .
 //= require carquery.0.3.3
+//= require md5-min
 
 
 $(document).ready(function() {
@@ -202,4 +203,14 @@ function()
 
 
     });
+
+$("#message_to").change(function(){
+
+    var email = $('#message_to>option:selected').text();
+    hash = hex_md5(email);
+    
+    $('#gravatar_to').attr('src', 'http://www.gravatar.com/avatar/' + hash).show();
+
+    });
+
 });

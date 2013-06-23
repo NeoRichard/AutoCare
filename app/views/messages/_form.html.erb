@@ -3,9 +3,16 @@
 
   <div class="form-inputs">
     <!--%= f.input :from %-->
-    <%= f.input :to, collection: User.all %>
-    <%= f.input :content %>
-    <%= f.input :opened %>
+    <div id="div_photo_to_user">
+      <div id="select_to_user">
+          <%= f.input :to, collection: User.all.collect {|p| [ p.email, p.id ] }, :input_html => {:maxlength =>2,:style=> 'width: 200px'} %> 
+      </div>
+        <img id="gravatar_to" style="display:none;"/>
+    </div>
+    <div id="other_content_message">
+      <%= f.input :content, :input_html => {:maxlength =>2,:style=> 'width: 310px'} %>
+      <%= f.input :opened %>
+    </div>
   </div>
 
   <div class="form-actions">

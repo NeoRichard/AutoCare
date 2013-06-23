@@ -1,7 +1,8 @@
 <h1>Listing messages</h1>
 
-<table>
+<!--table>
   <tr>
+    <th>Image</th>
     <th>From</th>
     <th>To</th>
     <th>Content</th>
@@ -11,21 +12,153 @@
     <th></th>
   </tr>
 
-<% @messages.each do |message| %>
+< % @messages.each do |message| %>
   <tr>
-    <!--td>< %= message.from %></td-->
-    <!--td>< %= message.to %></td-->
-    <td><%= User.find(message.from).name %></td>
-    <td><%= User.find(message.to).name %></td>
-    <td><%= message.content %></td>
-    <td><%= message.opened %></td>
-    <td><%= link_to 'Show', [current_user, message] %></td>
-    <td><%= link_to 'Edit', edit_user_message_path(current_user, message) %></td>
-    <td><%= link_to 'Destroy', [current_user, message], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <!- -td>< %= message.from %></td>
+    <td>< %= message.to %></td- ->
+    <td>
+      < %= gravatar_for User.find(message.from),   size: 23 , :class => 'brand' %>
+</td>
+    <td>< %= User.find(message.from).name %></td>
+    <td>< %= User.find(message.to).name %></td>
+    <td>< %= message.content %></td>
+    <td>< %= message.opened %></td>
+    <td>< %= link_to 'Show', [current_user, message] %></td>
+    <td>< %= link_to 'Edit', edit_user_message_path(current_user, message) %></td>
+    <td>< %= link_to 'Destroy', [current_user, message], method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
-<% end %>
+< % end %>
 </table>
 
-<br />
+<br /-->
 
+<!-- %= link_to "New Message", new_user_message_path(current_user) %-->
+
+
+
+<!--ul>
+      < % @messages.each do |message| %>
+      <li>
+<a class="messagesContent" href="https://www.facebook.com/messages/659258355" role="button">
+  <div class="clearfix">
+    <div class="MercuryThreadImage _8o _8s lfloat">
+      <div class="_55lt" style="width:50px;height:50px;" id=".reactRoot[8036137]">
+        <img class="img" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/276051_659258355_1763543965_q.jpg" height="50" width="50" id=".reactRoot[8036137].[0:0]">
+      </div>
+    </div>
+    <div class="clearfix _42ef">
+      <div class="snippetThumbnail rfloat">
+        <span class="_56hv hidden_elem">
+          <i style="background-image: url(/images/blank.gif);">
+          </i>
+        </span>
+        <span class="hidden_elem">
+          <span class="_56hy">
+          </span>
+          <span class="_56hv">
+            <i style="background-image: url(/images/blank.gif);">
+            </i>
+          </span>
+        </span>
+      </div>
+      <div class="content fsm fwn fcg">
+        <div class="author">
+          <strong>Evelyn Pastora Paz Farias Navarrete</strong>
+        </div>
+        <div class="snippet preview fsm fwn fcg">
+          <span>
+            <span class="MercuryRepliedIndicator seenByListener repliedLast">
+            </span>
+            <span class="MercuryAttachmentIndicator">
+            </span>
+            http://www.youtube.com/watch?v=JuPWlNaGmlA&amp;sns=fb
+          </span>
+        </div>
+        <div class="time">
+          <abbr title="viernes" data-utime="1371801078.379" class="timestamp">Vie</abbr>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
+</li>
+      < % end %>
+
+</ul-->
+
+
+<ul class="uiList _2tm _4kg" id="wmMasterViewThreadlist" role="list">
+      <% @messages.each do |message| %>
+  <li class="_k-" role="listitem" id="recent:user:659258355">
+    <div class="clearfix">
+      <div class="_l7 rfloat">
+        <a class="_l8 _kz" href="#" role="button" data-hover="tooltip" aria-label="Marcar la conversación como no leída">
+        </a>
+        <a class="_l8 _l9" href="#" role="button" data-hover="tooltip" aria-label="Archivar">
+        </a>
+        <a class="_l8 hidden_elem" href="#" role="button"></a>
+      </div>
+      <a class="_k_" rel="ignore" href="https://www.facebook.com/messages/evelyn.fariasnavarrete" role="button">
+
+      
+        <div class="clearfix pvs">
+          <div class="MercuryThreadImage mrm lfloat">
+            <div class="_55lt" style="width:50px;height:50px;" id=".reactRoot[7834202]">
+              <!--img class="img" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/276051_659258355_1763543965_q.jpg" height="50" width="50" id=".reactRoot[7834202].[0:0]"-->
+              <div class="flow_image">
+                <% if message.from == current_user.id %>
+              <%= gravatar_for User.find(message.from), size: 25 , :class => 'brand' %>
+                <% else %>
+              <%= gravatar_for User.find(message.from), size: 50 , :class => 'brand' %>
+                <% end %>
+
+      <%= image_tag("icon-email.png", :size => "15x15") %>
+
+                <% if message.to == current_user.id %>
+              <%= gravatar_for User.find(message.to), size: 25 , :class => 'brand' %>
+                <% else %>
+              <%= gravatar_for User.find(message.to), size: 50 , :class => 'brand' %>
+                <% end %>
+
+              </div>
+            </div>
+          </div>
+          <div class="_l4">
+            <span class="accessible_elem">
+    <%= User.find(message.from).name %>
+  </span>
+
+            <abbr title=<%= message.created_at.strftime("%A") %>
+             data-utime="1371801078.379" class="_l0 timestamp">
+              <%= message.created_at.strftime("%c") %></abbr>
+              <!-- http://www.albertofortes.com/blog/customizando-fechas-en-ruby-on-rails/ -->
+            <div class="_l2">
+              <span aria-hidden="true" class="_l1">"<%= message.content[0..10] %>"</span>
+              <span class="_l5 hidden_elem">... <%= link_to 'more', [current_user, message]  %></span>
+            </div>
+            <div class="clearfix">
+              <div class="_l6 rfloat"></div>
+              <div class="_l3 fsm fwn fcg">
+                <% if message.from == current_user.id %>
+                <span class="MercuryRepliedIndicator seenByListener repliedLast"></span>
+                <% end %>
+                <span class="MercuryAttachmentIndicator"></span>
+  <%= message.content %>
+                </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </li>
+
+
+
+
+
+      <% end %>
 <%= link_to "New Message", new_user_message_path(current_user) %>
+
+
+
+</ul>
