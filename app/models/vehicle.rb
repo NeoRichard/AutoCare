@@ -3,7 +3,8 @@ class Vehicle < ActiveRecord::Base
   has_attached_file :image, styles: { medium: '200x200>', thumb: '48x48>' }
 
   attr_accessible :brand, :fuel, :km, :user_id, :vehicle_model, :vehicle_type, :year, :trim
-  attr_accessible :image
+  attr_accessible :image, :money, :default => 0
+
 
   belongs_to :user
 
