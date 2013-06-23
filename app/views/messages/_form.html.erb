@@ -3,7 +3,7 @@
 
   <div class="form-inputs">
     <!--%= f.input :from %-->
-    <%= f.input :to %>
+    <%= f.input :to, collection: User.all %>
     <%= f.input :content %>
     <%= f.input :opened %>
   </div>
@@ -12,3 +12,5 @@
     <%= f.button :submit %>
   </div>
 <% end %>
+
+  <div class="form-inputs">

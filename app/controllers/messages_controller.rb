@@ -11,8 +11,8 @@ before_filter :get_user
   # GET /messages.json
   def index
 #    @messages = Message.all
-#    @messages = @user.messages
-    @messages = Message.where(:from => @user.id , :to => @user.id )
+    @messages =  Message.where(from: @user.id )
+    @messages +=  Message.where( to: @user.id)
 
     respond_to do |format|
       format.html # index.html.erb

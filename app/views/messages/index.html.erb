@@ -13,8 +13,10 @@
 
 <% @messages.each do |message| %>
   <tr>
-    <td><%= message.from %></td>
-    <td><%= message.to %></td>
+    <!--td>< %= message.from %></td-->
+    <!--td>< %= message.to %></td-->
+    <td><%= User.find(message.from).name %></td>
+    <td><%= User.find(message.to).name %></td>
     <td><%= message.content %></td>
     <td><%= message.opened %></td>
     <td><%= link_to 'Show', [current_user, message] %></td>
